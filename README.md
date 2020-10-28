@@ -1,4 +1,4 @@
-![Github Actions Badge](https://github.com/abtris/fiber-demo/workflows/Go/badge.svg)
+[![Github Actions Badge](https://github.com/abtris/fiber-demo/workflows/Go/badge.svg)](https://github.com/abtris/fiber-demo/actions)
 
 # Fiber Hello World Demo
 
