@@ -1,3 +1,5 @@
+![Github Actions Badge](https://github.com/abtris/fiber-demo/workflows/Go/badge.svg)
+
 # Fiber Hello World Demo
 
 > An Express-inspired web framework written in Go.
