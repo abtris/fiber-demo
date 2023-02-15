@@ -10,6 +10,5 @@ require (
 	github.com/gofiber/template v1.6.4
 	github.com/gofiber/utils v0.0.10
 	github.com/klauspost/compress v1.11.2 // indirect
-	github.com/prometheus/client_golang v1.8.0 // indirect
-	golang.org/x/sys v0.0.0-20201027140754-0fcbb8f4928c // indirect
+	github.com/prometheus/client_golang v1.11.1 // indirect
 )
