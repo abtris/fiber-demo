@@ -2,27 +2,21 @@ name: Go
 
 on: [push, pull_request]
 
-jobs:
+permissions:
+  contents: read
 
-  build:
-    name: Build
+jobs:
+  test:
     runs-on: ubuntu-latest
     steps:
-
-    - name: Set up Go 1.x
-      uses: actions/setup-go@v2
-      with:
-        go-version: ^1.13
-
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v2
-
-    - name: Get dependencies
-      run: |
-        go mod download
-
-    - name: Build
-      run: go build -v .
-
-    - name: Test
-      run: go test -v .
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7
+        with:
+          go-version-file: go.mod
+          cache: true
+      - run: go mod download
+      - run: go mod tidy && git diff --exit-code -- go.mod go.sum
+      - run: go test -race ./...
+      - run: go vet ./...
+      - run: go build ./...
+      - run: go run golang.org/x/vuln/cmd/govulncheck@v1.9.0 ./...
