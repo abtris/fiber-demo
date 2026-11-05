@@ -5,10 +5,10 @@ import (
 	"os"
 
 	"github.com/ansrivas/fiberprometheus/v2"
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/limiter"
-	"github.com/gofiber/fiber/v2/middleware/logger"
-	"github.com/gofiber/fiber/v2/middleware/requestid"
+	"github.com/gofiber/fiber/v3"
+	"github.com/gofiber/fiber/v3/middleware/limiter"
+	"github.com/gofiber/fiber/v3/middleware/logger"
+	"github.com/gofiber/fiber/v3/middleware/requestid"
 	"github.com/gofiber/template/html"
 )
 
@@ -19,11 +19,11 @@ func initServer() *fiber.App {
 		Views: engine,
 	})
 
-	 // This here will appear as a label, one can also use
-  // fiberprometheus.NewWith(servicename, namespace, subsystem )
-  prometheus := fiberprometheus.New("hello-world-service")
-  prometheus.RegisterAt(app, "/metrics")
-  app.Use(prometheus.Middleware)
+	// This here will appear as a label, one can also use
+	// fiberprometheus.NewWith(servicename, namespace, subsystem )
+	prometheus := fiberprometheus.New("hello-world-service")
+	prometheus.RegisterAt(app, "/metrics")
+	app.Use(prometheus.Middleware)
 
 	app.Static("/static", "./public")
 	app.Use(logger.New())
