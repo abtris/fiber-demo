@@ -5,7 +5,7 @@ go 1.27.3
 require (
 	github.com/ansrivas/fiberprometheus/v2 v2.18.0
 	github.com/gofiber/fiber/v2 v2.52.16
-	github.com/gofiber/template v1.6.4
+	github.com/gofiber/template v1.8.3
 	github.com/gofiber/utils v1.2.0
 )
 
