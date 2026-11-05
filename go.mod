@@ -6,7 +6,7 @@ require (
 	github.com/ansrivas/fiberprometheus/v2 v2.18.0
 	github.com/gofiber/fiber/v2 v2.52.16
 	github.com/gofiber/template v1.6.4
-	github.com/gofiber/utils v1.2.0
+	github.com/gofiber/utils/v2 v2.6.4
 )
 
 require (
@@ -30,6 +30,6 @@ require (
 	github.com/valyala/fasthttp v1.73.0 // indirect
 	go.opentelemetry.io/otel v1.45.0 // indirect
 	go.opentelemetry.io/otel/trace v1.45.0 // indirect
-	golang.org/x/sys v0.47.0 // indirect
+	golang.org/x/sys v0.49.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
