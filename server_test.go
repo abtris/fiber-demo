@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/utils"
+	"github.com/gofiber/utils/v2"
 )
 
 func testStatus200(t *testing.T, app *fiber.App, url string, method string) {
